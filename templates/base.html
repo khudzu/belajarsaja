@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% block meta %}
+  {% endblock meta %}
+</head>
+
+<body>
+  {% block content %}
+  {% endblock content %}
+ <form action="terdaftar.py" method="post">
+    Masukkan data buku baru di perpustakaan<br />
+
+    NIP.<input type="text" name="NIP"><br />
+    Nama.<input type="text" name="Nama"><br />
+    Status.<input type="text" name="Status"><br />
+    Golongan.<input type="text" name="Golongan"><br />
+
+    <p><input type="submit" value="Kirim"></p>
+    </form>
+</body>
+
+</html>
